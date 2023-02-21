@@ -279,13 +279,13 @@ namespace Auth0.ManagementApi.Clients
         }
 
         /// <summary>
-        /// Retrieves a list of all roles for an organization members.
+        /// Retrieves a list of all roles for an organization member.
         /// </summary>
         /// <param name="organizationId">The id of the organization for which you want to retrieve the roles for a given user.</param>
         /// <param name="userId">The id of the user for which you want to retrieve the roles.</param>
         /// <param name="pagination">Specifies pagination info to use when requesting paged results.</param>
         /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
-        /// <returns>An <see cref="IPagedList{OrganizationMember}"/> containing the organization members.</returns>
+        /// <returns>An <see cref="IPagedList{Role}"/> containing the organization member's roles.</returns>
         public Task<IPagedList<Role>> GetAllMemberRolesAsync(string organizationId, string userId, PaginationInfo pagination, CancellationToken cancellationToken = default)
         {
             if (pagination == null)
